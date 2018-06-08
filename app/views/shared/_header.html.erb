@@ -1,3 +1,8 @@
 <%= link_to 'Home', root_path %>
 <%= link_to 'Contacto', estaticas_contacto_path %>
 <%= link_to 'Nosotros', estaticas_nosotros_path %>
+<br>
+<%= link_to 'Iniciar sesión', new_autor_session_path %>
+<%= link_to 'Unirse', new_autor_registration_path %>
+<%= link_to 'Cerrar sesión', destroy_autor_session_path, method: :delete %>
+<%= link_to 'Editar autor', edit_autor_registration_path %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  #get 'articulos/new'
+  #get 'articulos/index'
+
+  resources :articulos
+
   devise_for :autors
   get 'estaticas/contacto'
 

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  #resources :comentarios
   #get 'articulos/new'
   #get 'articulos/index'
 
-  resources :articulos
+  resources :articulos do
+  resources :comentarios
+  end
 
   devise_for :autors
   get 'estaticas/contacto'

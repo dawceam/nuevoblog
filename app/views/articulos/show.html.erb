@@ -1,5 +1,14 @@
 <h1><%= @articulo.titulo %></h1>
 <p>Creado el <%= @articulo.created_at.strftime("%d-%m-%Y") %></p>
 <p><%= @articulo.contenido %></p>
-<%= link_to "Editar", edit_articulo_path(@articulo) %>
-<%= link_to "Eliminar", @articulo, :method => :delete, data: {confirm: "¿Seguro que quieres eliminar el artículo?"} %>
+
+<p><%= @articulo.comentarios.count %> Comentarios</p>
+<%= render @articulo.comentarios %>
+<br>
+<p>Deja tu comentario:</p>
+<%= render 'comentarios/form' %>
+
+<% if autor_signed_in? %>
+  <%= link_to "Editar", edit_articulo_path(@articulo) %>
+  <%= link_to "Eliminar", @articulo, :method => :delete, data: {confirm: "¿Desea eliminar el artículo?"} %>
+<% end %>

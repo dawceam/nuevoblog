@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'mail', '~> 2.6', '>= 2.6.4'
 
 group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

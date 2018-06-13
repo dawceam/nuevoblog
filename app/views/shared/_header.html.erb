@@ -44,7 +44,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <% if !autor_signed_in? %>
           <a class="dropdown-item" <%= link_to 'Iniciar sesión', new_autor_session_path %></a>
-        <% else %> 
+        <% else %>
           <a class="dropdown-item" <%= link_to 'Cerrar sesión', destroy_autor_session_path, method: :delete %></a>
         <% end %>
           <div class="dropdown-divider"></div>

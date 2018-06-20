@@ -62,16 +62,6 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "tuBlog_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  ActionMailer::Base.smtp_settings = {
-  :port           => ENV['587'],
-  :address        => ENV['smtp.gmail.com'],
-  :user_name      => ENV['dawceam@gmail.com'],
-  :password       => ENV['ceamgil2018'],
-  :domain         => 'miblog1-jose.herokuapp.com',
-  :authentication => :plain,
-    }
-  ActionMailer::Base.delivery_method = :smtp
-
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
